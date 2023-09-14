@@ -44,7 +44,7 @@ const Bottles = () => {
           savedCart.push(bottle);
         }
       }
-      console.log("saved cart", savedCart);
+      // console.log("saved cart", savedCart);
       setCart(savedCart);
     }
   }, [bottles]);
