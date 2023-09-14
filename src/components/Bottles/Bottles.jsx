@@ -61,8 +61,14 @@ const Bottles = () => {
 //   cart remove
   const handleRemoveFromCart = (id) => {
     //visual cart remove
+    console.log(cart,id);
     const remainingCart = cart.filter((b) => b.id !== id);
-    setCart(remainingCart);
+    setCart([...remainingCart]);
+  /*   setCart((previousCart) => {
+      const filtered = previousCart.filter(b => b.id !== id);
+      const updatedCart = [...filtered]
+      return updatedCart;
+    }) */
     //remove from LS
     removeFromLocalStorage(id);
   };
